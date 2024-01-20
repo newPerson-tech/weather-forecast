@@ -1,54 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="./src/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <title>Weather Forecast Online</title>
 </head>
+
 <body>
     <div class="container">
-        <div class="app-wrapper">
-            <nav class="upper-nav-set">
-                <img src="./images/IMG-3005.jpg" alt="logo-img-header" width="70px" height="70px">
-                <input type="search">
-            </nav>
-            <header class="current-forecast">
-                <h1 class="current-location">
-                    New York
-                </h1>
-                <ul class="current-forecast-data">
-                    <li class="current-date">
-                        Friday 5:00
-                    </li>
-                    <li class="current-temp-day">
-                        Day 16°
-                    </li>
-                    <li class="current-temp-night">
-                        Night 15°
-                    </li>
-                </ul>
-                <div class="row">
-                    <div class="col-6">
-                        <img src="./images/sunny.png" alt="header-image-current-weather">
-                        12°C | °F
-                    </div>
-                    <div class="col-6">
-                        <ul class="current-forecast-details">
-                            <li class="precipitation">
-                                Precipitation: 0%
+        <div class="app-wrapper-external">
+            <div class="app-wrapper">
+                <header class="current-forecast">
+                    <div class="overview">
+                        <h1 class="current-location" id="city">
+                        </h1>
+                        <ul class="current-forecast-data">
+                            <li class="current-date" id="date">
+                                Friday 5:00
                             </li>
-                            <li class="humidity">
-                                Humidity: 73%
+                            <li class="current-temp-day">
+                                Day <span id="temperature-day"></span>°
                             </li>
-                            <li class="wind">
-                                Wind: 2km/h
+                            <li class="current-temp-night">
+                                Night <span id="temperature-night"></span>°
                             </li>
                         </ul>
                     </div>
-                </div>
-            </header>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="clearfix weather-temperature">
+                                <img src="./images/sunny.png" alt="header-image-current-weather" class="float-left" />
+                                <div class="float-left">
+                                    <strong id="temperature"></strong>
+                                    <span class="units">°C | <a href="" class="fahrenheits">°F</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <ul class="current-forecast-details">
+                                <li class="humidity">
+                                    Humidity: <span id="humidity">73</span>%
+                                </li>
+                                <li class="wind">
+                                    Wind: <span id="wind">2</span>km/h
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+            </div>
             <small>
                 <a href="https://github.com/newPerson-tech/weather-forecast-app" target="_blank">Open-source code</a>
                 by Tetiana Paniot
@@ -59,4 +64,5 @@
 
     </script>
 </body>
+
 </html>
