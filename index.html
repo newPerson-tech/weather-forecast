@@ -16,6 +16,15 @@
         <div class="app-wrapper-external">
             <div class="app-wrapper">
                 <header class="current-forecast">
+                    <h2 class="main-heading">Weather Forecast</h2>
+                    <form>
+                        <input type="search" name="search-location" class="search-location" id="input-location"
+                            placeholder="Enter a city" required>
+                        <input type="submit" value="Search" name="submit-location-to-search"
+                            class="submit-location-to-search" id="input-lsubmit">
+                    </form>
+                </header>
+                <main class="main-section">
                     <div class="overview">
                         <h1 class="current-location" id="city">
                         </h1>
@@ -52,7 +61,7 @@
                             </ul>
                         </div>
                     </div>
-                </header>
+                </main>
             </div>
             <small>
                 <a href="https://github.com/newPerson-tech/weather-forecast-app" target="_blank">Open-source code</a>
@@ -60,9 +69,7 @@
             </small>
         </div>
     </div>
-    <script src="./src/script.js">
-
-    </script>
+    <script src="./src/script.js"></script>
 </body>
 
 </html>
